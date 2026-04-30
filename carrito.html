@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrito</title>
+
+<link rel="stylesheet" href="css/carrito.css">
+</head>
+<body>
+
+<div class="cart-container">
+
+    <h1>Carrito</h1>
+
+    <a href="inventario.html" class="btn-volver">Volver</a>
+
+    <!-- Encabezados -->
+    <div class="cart-header">
+        <span>Producto</span>
+        <span>Precio</span>
+        <span>Cantidad</span>
+        <span>Total</span>
+    </div>
+
+    <!-- Productos -->
+    <div id="contenedor-carrito"></div>
+
+    <!-- Subtotal -->
+    <h2 id="totalGeneral">Subtotal $0</h2>
+
+    <!-- Botón -->
+    <button onclick="pagar()" class="btn-checkout">Pagar</button>
+
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script type="module" src="carrito.js"></script>
+</body>
+</html>

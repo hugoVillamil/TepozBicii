@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Rentas</title>
+
+    <link rel="stylesheet" href="css/gestionar-renta.css">
+</head>
+<body>
+
+    <!-- Botón volver -->
+    <a href="menu.html" class="btn-volver">Volver al menú</a>
+
+    <!-- Título -->
+    <h1>Gestionar Rentas</h1>
+
+    <!-- Contenedor -->
+    <div id="contenedor-rentas"></div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+    <!-- MODAL PREGUNTA -->
+    <div id="modalPregunta" class="modal" style="display:none;">
+        <div class="modal-box">
+            <h3>¿Hubo retraso?</h3>
+
+            <button onclick="sinRetraso()" class="btn-pro">No</button>
+            <button onclick="mostrarPenalizacion()" class="btn-warning">Sí</button>
+            <button onclick="cerrarModal()" class="btn-danger">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- MODAL PENALIZACIÓN -->
+    <div id="modalPenalizacion" class="modal" style="display:none;">
+        <div class="modal-box">
+            <h3>Penalización</h3>
+
+            <label>Horas extra</label>
+            <input type="number" id="horasExtra" oninput="calcularCosto()">
+
+            <label>Costo de retraso</label>
+            <input type="text" id="costoRetraso" readonly>
+
+            <button onclick="aplicarPenalizacion()" class="btn-warning">
+                Confirmar devolución
+            </button>
+
+            <button onclick="cerrarModal()" class="btn-danger">
+                Cancelar
+            </button>
+        </div>
+    </div>
+
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="gestionar-renta.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+/* ================= REGISTRO.CSS ================= */
+
+body {
+        font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('images/Fondo2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.5);
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 40px;
+}
+
+.left {
+    color: white;
+    width: 40%;
+}
+
+.right {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    color: white;
+    width: 350px;
+}
+
+.form-control {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.form-control::placeholder {
+    color: #ddd;
+}
+
+.btn-custom {
+    background: orange;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background: darkorange;
+}
+/* ================= MENSAJE ================= */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    padding: 12px 20px;
+    border-radius: 10px;
+
+    color: white;
+    font-weight: bold;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition: 0.3s;
+
+    z-index: 9999;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TIPOS */
+.toast-ok {
+    background: #4caf50;
+}
+
+.toast-error {
+    background: #f44336;
+}
+
+.toast-warning {
+    background: #ff9800;
+}

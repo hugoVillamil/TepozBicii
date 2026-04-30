@@ -1,0 +1,113 @@
+/* ================= DASHBOARD.CSS ================= */
+
+/* Todo el fondo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ================= BARRA SUPERIOR ================= */
+.topbar {
+    /* Café claro */
+    background: #6d4c41;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 20px;
+}
+
+/* ================= CONTENEDOR ================= */
+.container-main {
+    display: flex;
+    height: 100vh;
+}
+
+/* ================= MENÚ LATERAL ================= */
+.sidebar {
+    width: 220px;
+
+    /* Café oscuro */
+    background: #3e2723;
+    color: white;
+
+    padding: 20px;
+}
+
+/* Links del menú */
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+
+    margin: 10px 0;
+    padding: 10px;
+
+    border-radius: 5px;
+}
+
+/* Efecto hover */
+.sidebar a:hover {
+    background: #5d4037;
+}
+
+/* ================= CONTENIDO ================= */
+.content {
+    flex: 1;
+
+    /* Aquí ponemos el GIF de bicicletas */
+    background: url('images/bici.gif') no-repeat center center/cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caja transparente encima del GIF */
+.gif-box {
+    background: rgba(255,255,255,0.2); /* blanco transparente */
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+/* ================= MENSAJE ================= */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    padding: 12px 20px;
+    border-radius: 10px;
+
+    color: white;
+    font-weight: bold;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition: 0.3s;
+
+    z-index: 9999;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TIPOS */
+.toast-ok {
+    background: #4caf50;
+}
+
+.toast-error {
+    background: #f44336;
+}
+
+.toast-warning {
+    background: #ff9800;
+}

@@ -1,0 +1,93 @@
+/* Fondo de toda la página */
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* Imagen de fondo */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("images/fondo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.cart-container{
+    width:80%;
+    margin:30px auto;
+    background:rgb(255, 255, 255);
+    border-radius:15px;
+    padding:30px;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+.cart-header,
+.cart-item{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr 1fr;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.qty-box button{
+    padding:5px 10px;
+}
+
+.btn-checkout{
+    margin-top:20px;
+    background:#1976d2;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.toast{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:green;
+    color:rgb(0, 0, 0);
+    padding:10px 20px;
+    border-radius:8px;
+    opacity:0;
+    transition:.3s;
+}
+
+.toast.show{
+    opacity:1;
+}
+/* Botón eliminar */
+.btn-eliminar{
+    background: #c62828;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-eliminar:hover{
+    background: #8e0000;
+}
+/* Botón volver */
+.btn-volver{
+    display:inline-block;
+    margin-bottom:20px;
+    background:#6d4c41;
+    color:white;
+    padding:10px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn-volver:hover{
+    background:#4e342e;
+}

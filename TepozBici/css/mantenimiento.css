@@ -1,0 +1,114 @@
+
+/* ================= MANTENIMIENTO.CSS ================= */
+
+/* Fondo futurista */
+body {
+    margin: 0;
+
+    /* Fondo con efecto oscuro */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+                url('images/mantenimiento.jpg') no-repeat center center/cover;
+
+    font-family: Arial, sans-serif;
+}
+
+/* BOTÓN VOLVER */
+.btn-volver {
+    position: absolute; /* Se queda arriba */
+    top: 20px;
+    left: 20px;
+
+    padding: 10px 15px;
+    border-radius: 8px;
+
+    background: #6d4c41; /* café */
+    color: white;
+    text-decoration: none;
+
+    /* efecto glow */
+    box-shadow: 0 0 10px #6d4c41;
+}
+
+.btn-volver:hover {
+    background: #5d4037;
+}
+
+/* CAJA PRINCIPAL */
+.contenedor {
+    width: 400px;
+    margin: 80px auto;
+
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+
+    border-radius: 15px;
+
+    /* efecto futurista glass */
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    /* sombra brillante */
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+/* Inputs */
+.form-control {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.6);
+    color: white;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+}
+
+
+/* BOTÓN GUARDAR */
+.btn-guardar {
+    background: #6d4c41;
+    color: white;
+    border: none;
+
+    /* efecto glow */
+    box-shadow: 0 0 10px #6d4c41;
+}
+.btn-guardar:hover {
+    background: #5d4037;
+}
+/* ================= MENSAJE ================= */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    padding: 12px 20px;
+    border-radius: 10px;
+
+    color: white;
+    font-weight: bold;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition: 0.3s;
+
+    z-index: 9999;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TIPOS */
+.toast-ok {
+    background: #4caf50;
+}
+
+.toast-error {
+    background: #f44336;
+}
+
+.toast-warning {
+    background: #ff9800;
+}

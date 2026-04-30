@@ -1,0 +1,100 @@
+/* ================= LOGIN.CSS ================= */
+
+/* Fondo de toda la pantalla */
+body {
+        font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('images/Fondo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Capa oscura */
+.overlay {
+    background: rgba(0,0,0,0.5); /* Negro transparente */
+    height: 100vh;
+
+    display: flex; /* Para acomodar elementos */
+    align-items: center; /* Centrado vertical */
+    justify-content: space-between; /* Separar lados */
+
+    padding: 40px;
+}
+/* Texto izquierdo */
+.left {
+    color: white;
+    width: 40%;
+}
+
+/* Caja del login */
+.right {
+    background: rgba(255,255,255,0.1); /* Fondo transparente */
+    padding: 30px;
+    border-radius: 10px; /* Bordes redondos */
+    backdrop-filter: blur(8px); /* Efecto vidrio */
+    color: white;
+    width: 350px;
+}
+
+/* Inputs */
+.form-control {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+/* Placeholder */
+.form-control::placeholder {
+    color: #ddd;
+}
+
+/* Botón */
+.btn-custom {
+    background: orange;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background: darkorange;
+}
+/* ================= MENSAJE ================= */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    padding: 12px 20px;
+    border-radius: 10px;
+
+    color: white;
+    font-weight: bold;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition: 0.3s;
+
+    z-index: 9999;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TIPOS */
+.toast-ok {
+    background: #4caf50;
+}
+
+.toast-error {
+    background: #f44336;
+}
+
+.toast-warning {
+    background: #ff9800;
+}
+
